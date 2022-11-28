@@ -175,34 +175,34 @@
      <None Include="Assets\QFramework\Framework\Examples\10.ShootingEditor2D\Scenes\请将这些场景添加到 Build Setings 中.txt" />
      <None Include="Assets\QFramework\Framework\Examples\10.ShootingEditor2D\LevelFile\LevelFileTest.xml" />
  <Reference Include="Unity.Timeline.Editor">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VSCode.Editor">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Timeline">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Rider.Editor">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VisualStudio.Editor">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PlasticSCM.Editor">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.40f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -388,7 +388,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.40f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Markdig">
- <HintPath>/Users/caizeyan/QFrameTest/Assets/QFramework/Framework/Toolkits/_CoreKit/PackageKit/Markdown/Markdig.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Assets/QFramework/Framework/Toolkits/_CoreKit/PackageKit/Markdown/Markdig.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.40f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

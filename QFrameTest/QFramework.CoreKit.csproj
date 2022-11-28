@@ -371,10 +371,10 @@
      <None Include="Assets\QFramework\Framework\Toolkits\_CoreKit\QFramework.CoreKit.asmdef" />
      <None Include="Assets\QFramework\Framework\Toolkits\_CoreKit\PackageKit\Markdown\license.txt" />
  <Reference Include="UnityEditor.UI">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
- <HintPath>/Users/caizeyan/QFrameTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.40f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -575,19 +575,19 @@
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.40f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="Markdig">
- <HintPath>/Users/caizeyan/QFrameTest/Assets/QFramework/Framework/Toolkits/_CoreKit/PackageKit/Markdown/Markdig.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Assets/QFramework/Framework/Toolkits/_CoreKit/PackageKit/Markdown/Markdig.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Newtonsoft.Json">
- <HintPath>/Users/caizeyan/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/Unity.Plastic.Newtonsoft.Json.dll</HintPath>
  </Reference>
  <Reference Include="unityplastic">
- <HintPath>/Users/caizeyan/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/unityplastic.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Plastic.Antlr3.Runtime">
- <HintPath>/Users/caizeyan/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/Unity.Plastic.Antlr3.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="log4netPlastic">
- <HintPath>/Users/caizeyan/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
+ <HintPath>/Users/caizeyan/QFrame/QFrameTest/Library/PackageCache/com.unity.collab-proxy@1.14.18/Lib/Editor/PlasticSCM/log4netPlastic.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.iOS.Extensions.Xcode">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.40f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>

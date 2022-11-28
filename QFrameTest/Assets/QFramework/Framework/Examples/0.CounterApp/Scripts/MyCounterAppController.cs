@@ -6,14 +6,18 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public class MyCounterAppModel: AbstractModel
+public interface IMyCounterAppModel : IModel
 {
-    public BindableProperty<int> Count = new BindableProperty<int>();
+    BindableProperty<int> Count { get; }
+}
 
+public class MyCounterAppModel: AbstractModel,IMyCounterAppModel
+{
+    public BindableProperty<int> Count { get; } = new BindableProperty<int>();
 
     protected override void OnInit()
     {
-        var storage = this.GetUtility<MyStorage>();
+        var storage = this.GetUtility<IMyStorage>();
         Count.SetValueWithoutEvent(storage.LoadInt(nameof(Count)));
         MyCounterApp.Interface.RegisterEvent<MyCountChangeEvent>(e =>
         {
@@ -22,7 +26,13 @@ public class MyCounterAppModel: AbstractModel
     }
 }
 
-public class MyStorage : IUtility
+public interface IMyStorage : IUtility
+{
+    void SaveInt(string key, int value);
+    int LoadInt(string key, int defaultValue = 0);
+}
+
+public class MyStorage : IMyStorage
 {
     public void SaveInt(string key, int value)
     {
@@ -36,11 +46,30 @@ public class MyStorage : IUtility
     
 }
 
-public class MyAchievementSystem: AbstractSystem
+public class EasySaveStorage : IMyStorage
+{
+    public void SaveInt(string key, int value)
+    {
+        //todo
+    }
+
+    public int LoadInt(string key, int defaultValue = 0)
+    {
+        //todo
+        throw new NotImplementedException();
+    }
+}
+
+public interface IMyAchievementSystem : ISystem
+{
+    
+}
+
+public class MyAchievementSystem: AbstractSystem,IMyAchievementSystem
 {
     protected override void OnInit()
     {
-        var Count = this.GetModel<MyCounterAppModel>().Count;
+        var Count = this.GetModel<IMyCounterAppModel>().Count;
         Count.Register(count =>
         {
             if (count == 10)
@@ -62,9 +91,9 @@ public class MyCounterApp : Architecture<MyCounterApp>
 {
     protected override void Init()
     {
-        this.RegisterSystem(new MyAchievementSystem());
-        this.RegisterModel(new MyCounterAppModel());
-        this.RegisterUtility(new MyStorage());
+        this.RegisterSystem<IMyAchievementSystem>(new MyAchievementSystem());
+        this.RegisterModel<IMyCounterAppModel>(new MyCounterAppModel());
+        this.RegisterUtility<IMyStorage>(new MyStorage());
     }
 }
 
@@ -72,7 +101,7 @@ public class MyIncreaseCountCommand:AbstractCommand
 {
     protected override void OnExecute()
     {
-        this.GetModel<MyCounterAppModel>().Count.Value++;
+        this.GetModel<IMyCounterAppModel>().Count.Value++;
         this.SendEvent<MyCountChangeEvent>();
     }
 }
@@ -81,7 +110,7 @@ public class MyDecreaseCountCommand:AbstractCommand
 {
     protected override void OnExecute()
     {
-        this.GetModel<MyCounterAppModel>().Count.Value--;
+        this.GetModel<IMyCounterAppModel>().Count.Value--;
         this.SendEvent<MyCountChangeEvent>();
     }
 }
@@ -100,11 +129,11 @@ public class MyCounterAppController : MonoBehaviour,IController
 
     private Text countText;
 
-    private MyCounterAppModel model;
+    private IMyCounterAppModel model;
     // Start is called before the first frame update
     void Start()
     {
-        model = this.GetModel<MyCounterAppModel>();
+        model = this.GetModel<IMyCounterAppModel>();
         addButton = transform.Find("BtnAdd").GetComponent<Button>();
         subButton = transform.Find("BtnSub").GetComponent<Button>();
         countText = transform.Find("CountText").GetComponent<Text>();
