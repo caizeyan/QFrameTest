@@ -6,9 +6,8 @@ namespace QFramework.Example
 {
     public class ArchitectureInHeartExample : MonoBehaviour
     {
-
         #region Framework
-
+        
         public interface ICommand
         {
             void Execute();
@@ -16,39 +15,35 @@ namespace QFramework.Example
 
         public class BindableProperty<T>
         {
-            private T mValue = default;
+            private T value = default;
 
             public T Value
             {
-                get => mValue;
+                get => value;
                 set
                 {
-                    if (mValue != null && mValue.Equals(value)) return;
-                    mValue = value;
-                    OnValueChanged?.Invoke(mValue);
+                    if (this.value != null && this.value.Equals(value) ) return;
+                    this.value = value;
+                    OnValueChange?.Invoke(this.value);
                 }
             }
 
-            public event Action<T> OnValueChanged = _ => { };
+            public event Action<T> OnValueChange = obj =>{};
         }
 
-        #endregion
-
-
-        #region 定义 Model
+        #endregion 
+        
+        #region Model
 
         public static class CounterModel
         {
-            public static BindableProperty<int> Counter = new BindableProperty<int>()
-            {
-                Value = 0
-            };
+            public static BindableProperty<int> Counter = new BindableProperty<int>(){Value = 0};
         }
         
         #endregion
 
-        #region 定义 Command
-        public struct IncreaseCountCommand : ICommand
+        #region Command
+        public struct IncreaseCountCommand:ICommand
         {
             public void Execute()
             {
@@ -56,15 +51,15 @@ namespace QFramework.Example
             }
         }
         
-        public struct DecreaseCountCommand : ICommand
+        public struct DecreaseCountCommand:ICommand
         {
             public void Execute()
             {
                 CounterModel.Counter.Value--;
             }
         }
+        
         #endregion
-
 
         private void OnGUI()
         {
@@ -72,9 +67,7 @@ namespace QFramework.Example
             {
                 new IncreaseCountCommand().Execute();
             }
-
             GUILayout.Label(CounterModel.Counter.Value.ToString());
-
             if (GUILayout.Button("-"))
             {
                 new DecreaseCountCommand().Execute();
