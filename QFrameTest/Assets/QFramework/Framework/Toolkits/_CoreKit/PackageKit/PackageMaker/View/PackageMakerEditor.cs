@@ -31,7 +31,6 @@ namespace QFramework
             {
                 return path;
             }
-
             return path + "/";
         }
 

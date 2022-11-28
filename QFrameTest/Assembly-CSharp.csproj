@@ -53,6 +53,7 @@
      <Compile Include="Assets\QFramework\Framework\Examples\0.CounterApp\Scripts\CounterAppController.cs" />
      <Compile Include="Assets\QFramework\Framework\Examples\0.CounterApp\Scripts\EditorCounterAppWindow.cs" />
      <Compile Include="Assets\QFramework\Framework\Examples\0.CounterApp\Scripts\MyCounterAppController.cs" />
+     <Compile Include="Assets\QFramework\Framework\Examples\1.QueryExample\MyQueryController.cs" />
      <Compile Include="Assets\QFramework\Framework\Examples\1.QueryExample\QueryExampleController.cs" />
      <Compile Include="Assets\QFramework\Framework\Examples\10.ShootingEditor2D\Scripts\Command\AddBulletCommand.cs" />
      <Compile Include="Assets\QFramework\Framework\Examples\10.ShootingEditor2D\Scripts\Command\FullBulletCommand.cs" />
