@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace QFramework.Example
 {
@@ -16,22 +17,17 @@ namespace QFramework.Example
                 Debug.Log(e.Age);
             }).UnRegisterWhenGameObjectDestroyed(gameObject);
         }
-        
+
         private void Update()
         {
-            // 鼠标左键点击
             if (Input.GetMouseButtonDown(0))
             {
-                TypeEventSystem.Global.Send(new TestEventA()
-                {
-                    Age = 18
-                });
+                TypeEventSystem.Global.Send(new TestEventA(){Age = 18});
             }
 
-            // 鼠标右键点击
             if (Input.GetMouseButtonDown(1))
             {
-                TypeEventSystem.Global.Send<TestEventA>();
+                TypeEventSystem.Global.Send(new TestEventA());
             }
         }
     }
