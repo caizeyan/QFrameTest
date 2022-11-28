@@ -8,33 +8,31 @@ namespace QFramework.Example
         {
             public void Say()
             {
-                Debug.Log("SomeService Say Hi");
+                Debug.LogError("???");
             }
         }
         
         public interface INetworkService
         {
-            void Connect();
+            void Connet();
         }
         
-        public class NetworkService : INetworkService
+        public class NetworkService:INetworkService
         {
-            public void Connect()
+            public void Connet()
             {
-                Debug.Log("NetworkService Connect Succeed");
+                Debug.LogError("net connet");
             }
         }
 
         private void Start()
         {
             var container = new IOCContainer();
-            
             container.Register(new SomeService());
-            
             container.Register<INetworkService>(new NetworkService());
             
             container.Get<SomeService>().Say();
-            container.Get<INetworkService>().Connect();
+            container.Get<INetworkService>().Connet();
         }
     }
 }
