@@ -1,28 +1,28 @@
 ﻿#if UNITY_EDITOR
+using System;
 using UnityEditor;
 using UnityEngine;
 
 namespace QFramework.Example
 {
-    public class EditorCounterAppWindow : EditorWindow,IController
+    public class EditorCounterAppWindow :EditorWindow,IController    
     {
-
-        [MenuItem("QFramework/Example/EditorCounterAppWindow")]
+        [MenuItem("MyQFrame/EditorCounterAppWindow")]
         static void Open()
         {
-            GetWindow<EditorCounterAppWindow>().Show();
+            GetWindow<EditorCounterAppWindow>();
         }
-        
-        private ICounterAppModel mCounterAppModel;
+
+        private ICounterAppModel model;
 
         private void OnEnable()
         {
-            mCounterAppModel = this.GetModel<ICounterAppModel>();
+            model = this.GetModel<ICounterAppModel>();
         }
 
         private void OnDisable()
         {
-            mCounterAppModel = null;
+            model = null;
         }
 
         private void OnGUI()
@@ -31,15 +31,13 @@ namespace QFramework.Example
             {
                 this.SendCommand<IncreaseCountCommand>();
             }
-            
-            GUILayout.Label(mCounterAppModel.Count.Value.ToString());
-
-
+            GUILayout.Label(model.Count.Value.ToString());
             if (GUILayout.Button("-"))
             {
                 this.SendCommand<DecreaseCountCommand>();
             }
         }
+        
 
         public IArchitecture GetArchitecture()
         {
@@ -47,4 +45,5 @@ namespace QFramework.Example
         }
     }
 }
+
 #endif
